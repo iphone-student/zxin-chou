@@ -1,0 +1,23 @@
+# 配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.9.160.122:3306/todo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 461900
+#  datasource:
+#    url: jdbc:dm://10.10.10.236:5236/Yangtzedb?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+#    username: SYSDBA
+#    password: Cttic@Dma@220811
+#    driver-class-name: dm.jdbc.driver.DmDriver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  port: 8080
+mybatis-plus:
+  global-config:
+    db-config:
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      updateStrategy: 1
+
