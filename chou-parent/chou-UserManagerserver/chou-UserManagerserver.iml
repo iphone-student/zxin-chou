@@ -140,6 +140,10 @@
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.4.2" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.3.0" level="project" />
     <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:4.2" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:druid:1.2.11" level="project" />
+    <orderEntry type="library" name="Maven: com.baomidou:dynamic-datasource-spring-boot-starter:3.5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.6.3" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.7" level="project" />
     <orderEntry type="library" name="Maven: com.dameng:DmJdbcDriver18:8.1.2.79" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.6.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:2.6.3" level="project" />

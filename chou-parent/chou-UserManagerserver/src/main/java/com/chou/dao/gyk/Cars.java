@@ -1,4 +1,4 @@
-package com.chou.dao;
+package com.chou.dao.gyk;
 
 import java.io.Serializable;
 

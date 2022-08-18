@@ -1,8 +1,12 @@
 package com.chou.Controller;
 
 
-import com.chou.dao.Cars;
-import com.chou.service.impl.CarsServiceImpl;
+import com.chou.dao.gyk.Cars;
+import com.chou.dao.zb.SysUser;
+import com.chou.mapper.gyk.CarsMapper;
+import com.chou.mapper.zb.SysUserMapper;
+import com.chou.service.impl.gyk.CarsServiceImpl;
+import com.chou.service.impl.zb.SysUserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +21,24 @@ public class demoController {
 
     @Autowired
     private CarsServiceImpl carsService;
+    @Autowired
+    private SysUserServiceImpl sysUserService;
+
+
+
 
     @GetMapping("/Cars/allCar")
-    @ApiOperation(value = "后台管理查询所有角色（带分页功能）")
+    @ApiOperation(value = "gyk数据库查询所有cars")
     public List<Cars> allCar(){
        List<Cars> car = carsService.allCar();
        return car;
     }
+    @GetMapping("/SysUser/alluser")
+    @ApiOperation(value = "zb数据库查询所有user")
+    public List<SysUser> allUser(){
+        List<SysUser> user = sysUserService.allUser();
+        return user;
+    }
+
+
 }

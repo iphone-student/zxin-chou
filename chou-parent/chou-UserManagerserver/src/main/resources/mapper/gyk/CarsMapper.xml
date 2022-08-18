@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.chou.mapper.CarsMapper">
+<mapper namespace="com.chou.mapper.gyk.CarsMapper">
 
-    <resultMap id="BaseResultMap" type="com.chou.dao.Cars">
+    <resultMap id="BaseResultMap" type="com.chou.dao.gyk.Cars">
             <id property="id" column="Id" jdbcType="INTEGER"/>
             <result property="name" column="Name" jdbcType="VARCHAR"/>
             <result property="speed" column="speed" jdbcType="DOUBLE"/>
@@ -14,7 +14,7 @@
         Id,Name,speed
     </sql>
 
-    <select id="allCar" resultType="com.chou.dao.Cars">
+    <select id="allCar" resultType="com.chou.dao.gyk.Cars">
         SELECT *  FROM cars
     </select>
 </mapper>

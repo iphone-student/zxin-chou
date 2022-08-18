@@ -1,8 +1,7 @@
-package com.chou.service;
+package com.chou.service.gyk;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.chou.dao.Cars;
-import org.springframework.stereotype.Service;
+import com.chou.dao.gyk.Cars;
 
 import java.util.List;
 

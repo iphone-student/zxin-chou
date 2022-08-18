@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @description: MyBatis-Plus来实现分页查询配置
  */
 @Configuration
-@MapperScan(basePackages = "com.cttic.yangtzeserver.usermanagerserver.mapper")
+@MapperScan(basePackages = "com.chou.mapper")
 public class MybatisPlusConfig {
 
 
