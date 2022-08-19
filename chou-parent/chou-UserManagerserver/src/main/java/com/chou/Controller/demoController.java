@@ -1,10 +1,9 @@
 package com.chou.Controller;
 
 
+import com.chou.dao.CoordinateDepth;
 import com.chou.dao.gyk.Cars;
 import com.chou.dao.zb.SysUser;
-import com.chou.mapper.gyk.CarsMapper;
-import com.chou.mapper.zb.SysUserMapper;
 import com.chou.service.impl.gyk.CarsServiceImpl;
 import com.chou.service.impl.zb.SysUserServiceImpl;
 import io.swagger.annotations.Api;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@Api(tags = "样本 API")
+@Api(tags = "多数据源测试样本 API")
 public class demoController {
 
     @Autowired
@@ -39,6 +38,7 @@ public class demoController {
         List<SysUser> user = sysUserService.allUser();
         return user;
     }
+
 
 
 }
