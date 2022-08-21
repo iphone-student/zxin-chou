@@ -20,8 +20,8 @@ public class demoController {
 
     @Autowired
     private CarsServiceImpl carsService;
-    @Autowired
-    private SysUserServiceImpl sysUserService;
+//    @Autowired
+//    private SysUserServiceImpl sysUserService;
 
 
 
@@ -32,12 +32,12 @@ public class demoController {
        List<Cars> car = carsService.allCar();
        return car;
     }
-    @GetMapping("/SysUser/alluser")
-    @ApiOperation(value = "zb数据库查询所有user")
-    public List<SysUser> allUser(){
-        List<SysUser> user = sysUserService.allUser();
-        return user;
-    }
+//    @GetMapping("/SysUser/alluser")
+//    @ApiOperation(value = "zb数据库查询所有user")
+//    public List<SysUser> allUser(){
+//        List<SysUser> user = sysUserService.allUser();
+//        return user;
+//    }
 
 
 

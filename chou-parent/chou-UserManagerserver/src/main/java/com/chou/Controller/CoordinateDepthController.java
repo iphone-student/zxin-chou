@@ -51,7 +51,7 @@ public class CoordinateDepthController {
                 //System.out.println(Double.parseDouble(TempNum.substring(matcher.start(),matcher.end())));
 
             }
-            System.out.println("数组： "+a[0]+"++"+a[1]+"++"+a[2]+"++"+a[3]);
+//            System.out.println("数组： "+a[0]+"++"+a[1]+"++"+a[2]+"++"+a[3]);
                    user = coordinateDepthService.txt2DB(a[1],a[2],a[3]);
         }
 
