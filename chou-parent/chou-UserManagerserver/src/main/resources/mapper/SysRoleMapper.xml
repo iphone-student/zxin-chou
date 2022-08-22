@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chou.mapper.SysRoleMapper">
+
+    <resultMap id="BaseResultMap" type="com.chou.dao.SysRole">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,code,name,
+        create_time,update_time
+    </sql>
+
+    <update id="updateRole">
+        UPDATE sys_role
+        <set>
+            <if test="roleName != null and roleName != ''">
+                "ROLE_NAME" = #{roleName},
+            </if>
+            <if test="roleNum != null and roleNum != ''">
+                "ROLE_NUM" = #{roleNum},
+            </if>
+            <if test="roleKey != null">
+                "ROLE_KEY" = #{roleKey},
+            </if>
+            <if test="roleSort != null">
+                "ROLE_SORT" = #{roleSort},
+            </if>
+            <if test="delFlag != null and delFlag != ''">
+                "DEL_FLAG" = #{delFlag},
+            </if>
+            <if test="status != null and status != ''">
+                "STATUS" = #{status},
+            </if>
+            <if test="updateBy != null">
+                "UPDATE_BY" = #{updateBy},
+            </if>
+            <if test="remark != null and remark != ''">
+                "REMARK" = #{remark},
+            </if>
+            <if test="menuCheckStrictly != null">
+                "MENU_CHECK_STRICTLY" = #{menuCheckStrictly},
+            </if>
+            <if test="deptCheckStrictly != null">
+                "DEPT_CHECK_STRICTLY" = #{deptCheckStrictly},
+            </if>
+            <if test="updateTime != null">
+                "UPDATE_TIME" = #{updateTime}
+            </if>
+        </set>
+        WHERE "ROLE_ID" = #{roleId}
+    </update>
+
+</mapper>
