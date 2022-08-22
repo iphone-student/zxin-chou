@@ -23,17 +23,23 @@ public class UserController {
     private SysUserServiceImpl sysUserService;
 
 
-    @GetMapping("/SysUser/alluser")
+    @GetMapping("/SysUser/allUser")
     @ApiOperation(value = "查询所有user")
     public ResultsPage<List<SysUser>> allUser(){
         List<SysUser> user = sysUserService.allUser();
         return ResultsPage.succeed(user,"查询成功");
     }
-    @GetMapping("/SysUser/adduser")
+    @GetMapping("/SysUser/addUser")
     @ApiOperation(value = "添加user")
     public ResultsPage addUser(SysUser sysUser){
         int i = sysUserService.insertAll(sysUser);
         return i > 0 ? ResultsPage.succeed("添加成功！") : ResultsPage.Error("添加失败！");
+    }
+    @GetMapping("/SysUser/updateUser")
+    @ApiOperation(value = "添加user")
+    public ResultsPage updateUser(SysUser sysUser){
+        int i = sysUserService.updateAll(sysUser);
+        return i > 0 ? ResultsPage.succeed("修改成功！") : ResultsPage.Error("修改失败！");
     }
 
 
